@@ -1,9 +1,9 @@
 import { useState } from "react"
 import DropdownArrow from "../assets/dropdown-arrow.svg?react"
-import { TextArea } from "./TextArea.jsx";
-import { SmallButton } from "./SmallButton.jsx";
+import { TextArea } from "./inputs/TextArea.jsx";
+import { SmallButton } from "./buttons/SmallButton.jsx";
 
-export function CareerObjectiveDropDown({handlers, details}) {
+export function CareerObjectiveDropDown({dispatch, details}) {
     const [open, setOpen] = useState(false);
     
     const handleOpen = () => {
@@ -20,9 +20,9 @@ export function CareerObjectiveDropDown({handlers, details}) {
             </div>
             {open && (
             <div className="dropdown-contents">
-                <TextArea/>
-                <div>
-                    <SmallButton name="Clear" onClick={() => handlers.handleClear()}/>
+                <TextArea dispatch={dispatch} value={details} onChange={(e) => dispatch({type: 'changed-text', value: e.target.value})}/>
+                <div className="dropdown-contents-buttons">
+                    <SmallButton name="Clear" onClick={() => dispatch({type: 'cleared-all'})}/>
                 </div>
             </div>)}
         </div>

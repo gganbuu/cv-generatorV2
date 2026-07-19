@@ -18,7 +18,7 @@
   --menu-width: clamp(450px, 100%, 30%);
   --menu-gap: 2rem;
 
-  --resume-padding: 1.5rem 2rem;
+  --resume-padding: 3rem 4rem;
   --resume-width: 70%;
 
   --resume-header-grid-template: 1fr 1fr / 1fr 1fr;
@@ -29,6 +29,8 @@
   --email-grid-area: cell2;
   --linkedin-grid-area: cell3;
   --github-grid-area: cell4;
+
+  --header-h1-font-weight: bold;
 
   --big-button-font-padding: 0.5rem 1rem;
   --big-button-border: none;
@@ -70,17 +72,18 @@ h1, h2 {
 }
 
 h2 {
-  font-weight: 100;
+  font-weight: normal;
   font-size: var(--h2-font-size);
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: normal;
   font-size: var(--h1-font-size)
 }
 
 
 /* resume */
+
 .resume {
   display: flex;
   flex-direction: column;
@@ -94,6 +97,20 @@ h1 {
   display: grid;
   grid-template: var(--resume-header-grid-template);
   grid-template-areas: var(--resume-header-grid-template-areas);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header > h1 {
+  font-weight: var(--header-h1-font-weight);
+}
+
+hr {
+  width: 100%;
+  border: 1px solid black;
 }
 
 #phone {
@@ -151,6 +168,8 @@ h1 {
   justify-content: space-between;
 }
 
+
+
 /* dropdown */
 .all-dropdowns-container {
   display: flex;
@@ -175,11 +194,16 @@ h1 {
   width: var(--dropdown-width);
 }
 
-.dropdown-arrow-button {
+.dropdown-arrow-button{
   background-color: transparent;
   border: none;
   width: var(--dropdown-arrow-width);
   height: var(--dropdown-arrow-width);
+}
+
+.dropdown-content-add-button, .dropdown-content-delete-button {
+  background-color: transparent;
+  border: none;
 }
 
 .dropdown-contents {
@@ -192,41 +216,55 @@ h1 {
   border-radius: var(--default-border-radius);
 }
 
-.dropdown-contents > label, .dropdown-contents > div {
+.dropdown-contents > label {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.dropdown-contents > div {
+.dropdown-contents-buttons {
+  display: flex;
   justify-content: end;
   align-items: end;
 }
 
 label {
   display: flex;
+  flex-direction: column;
   gap: var(--label-gap)
 }
 
-/* text area and text input */
+/* inputs */
 .text-input {
   font-size: var(--h2-font-size);
   padding: var(--big-button-font-padding);
   border-radius: var(--default-border-radius);
 }
 
-
 textarea {
   font-size: var(--h2-font-size);
+  font-family: var(--default-font);
   padding: var(--big-button-font-padding);
   border-radius: var(--default-border-radius);
-  height: var(--text-area-min-height);
+  min-height: var(--text-area-min-height);
   resize: none;
   field-sizing: content;
 }
 
+.date-input {
+  font-family: var(--default-font);
+  font-size: var(--h2-font-size);
+  padding: var(--big-button-font-padding);
+  border-radius: var(--default-border-radius);
+}
 
+/* date box */
+.date-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 /* helper */

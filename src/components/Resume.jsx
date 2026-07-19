@@ -1,15 +1,27 @@
-export function Resume({details}) {
+export function Resume({genInfoDetails, careerObjectiveDetails}) {
     
     return (
         <div className="resume">
             <header>
-                <h1>{details.name}</h1>
+                <h1>{genInfoDetails.name}</h1>
                 <div className="resume-header-grid">
-                    <h2 id="phone">{details.phone}</h2>
-                    <h2 id="email">{details.email}</h2>
-                    <h2 id="linkedin">{details.linkedIn}</h2>
-                    <h2 id="github">{details.gitHub}</h2>
+                    <h2 id="phone">{genInfoDetails.phone}</h2>
+                    <h2 id="email">{genInfoDetails.email}</h2>
+                    <h2 id="linkedin">{genInfoDetails.linkedIn}</h2>
+                    <h2 id="github">{genInfoDetails.gitHub}</h2>
                 </div>
+                <br />
+                <h1>Career Objective</h1>
+                <hr />
+                <h2 id="careerObjective"> {careerObjectiveDetails}</h2>
+
+                
+                <h1>Education</h1>
+                <hr />
+
+                
+                <h1>Experience</h1>
+                <hr />
             </header>
             
             
