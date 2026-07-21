@@ -28,6 +28,10 @@ export function genInfoReducer(state, action) {
             Object.keys(emptyDetails).forEach(key => emptyDetails[key] = "");
             return emptyDetails
         }
+        case 'fill-with-sample': {
+            return genInfoInitialState
+        }
+        
         default: {
             throw Error(`Unknown action: ${action.type}]`)
         }

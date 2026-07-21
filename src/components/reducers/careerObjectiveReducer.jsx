@@ -8,6 +8,11 @@ export function careerObjectiveReducer(state, action) {
         case 'cleared-all': {
             return "";
         }
+        
+        case 'fill-with-sample': {
+            return careerObjectiveInitialState
+        }
+
         default: {
             throw Error(`Unknown action: ${action.type}]`)
         }

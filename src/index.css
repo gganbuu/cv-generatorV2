@@ -143,6 +143,10 @@ hr {
 }
 
 /* button */
+button {
+  cursor: pointer;
+}
+
 .small-button {
   font-size: var(--h2-font-size);
   background-color: var(--clear-button-color);
@@ -169,6 +173,17 @@ hr {
 }
 
 
+.dropdown-arrow-button{
+  background-color: transparent;
+  border: none;
+  width: var(--dropdown-arrow-width);
+  height: var(--dropdown-arrow-width);
+}
+
+.dropdown-content-add-button, .dropdown-content-delete-button {
+  background-color: transparent;
+  border: none;
+}
 
 /* dropdown */
 .all-dropdowns-container {
@@ -194,17 +209,6 @@ hr {
   width: var(--dropdown-width);
 }
 
-.dropdown-arrow-button{
-  background-color: transparent;
-  border: none;
-  width: var(--dropdown-arrow-width);
-  height: var(--dropdown-arrow-width);
-}
-
-.dropdown-content-add-button, .dropdown-content-delete-button {
-  background-color: transparent;
-  border: none;
-}
 
 .dropdown-contents {
   display: flex;
@@ -265,6 +269,36 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* achievement box */
+.achievements-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievements-box > li {
+  display: flex;
+}
+
+.achievements-box > li > textarea {
+  display: flex;
+  min-height: 0px;
+  width: 100%;
+}
+
+/* education block */
+.education-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-block-degree-and-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 
 
 /* helper */

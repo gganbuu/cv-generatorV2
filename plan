@@ -1,0 +1,7 @@
+need to bring state of EducationBlock upwards so that it becomes contained in app 
+or create educationBlocksReducer that holds EducationBlocksIntitialState and educationBlocksReducers
+
+move education state reducer into the education block so that each education state is contained within the block
+
+educationblockstate is then past into resume, and each time user creates a new block it should 
+dynamically render it into the dom  
